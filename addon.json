@@ -1,0 +1,19 @@
+{
+    "legacy_addon_id": "",
+    "title": "[tl] Most Reacted Posts",
+    "description": "Show most reacted posts below the first post",
+    "version_id": 1000000,
+    "version_string": "1.0.0",
+    "dev": "Truonglv",
+    "dev_url": "https://nobita.me",
+    "faq_url": "https://nobita.me",
+    "support_url": "",
+    "extra_urls": [],
+    "require": {
+        "XF": [
+            2010470,
+            "XenForo 2.1.4"
+        ]
+    },
+    "icon": ""
+}

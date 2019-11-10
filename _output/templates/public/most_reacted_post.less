@@ -1,0 +1,40 @@
+.MRP-postList {
+  margin-top: @xf-paddingLarge;
+  .message-user>* {
+    &:not(.message-avatar) {
+      display: none;
+    }
+  }
+
+  .message {
+    .message-footer {
+      display: none;
+    }
+
+    .message-body {
+      margin-top: 0;
+    }
+
+    .message-attribution {
+      display: none;
+    }
+
+    .message-cell--user {
+      flex: 0 0 76px;
+
+      .avatar {
+        width: 76px - @xf-paddingLarge * 2;
+        height: 76px - @xf-paddingLarge * 2;
+
+        &.avatar--default {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+
+  .MRP-postMeta {
+    display: block !important;
+    margin-top: @xf-paddingLarge;
+  }
+}

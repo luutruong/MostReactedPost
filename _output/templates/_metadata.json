@@ -1,0 +1,12 @@
+{
+    "public/most_reacted_post.less": {
+        "version_id": 1000000,
+        "version_string": "1.0.0",
+        "hash": "66f7a858175d565753697eae54d0fae6"
+    },
+    "public/most_reacted_post_macros.html": {
+        "version_id": 1000000,
+        "version_string": "1.0.0",
+        "hash": "8adec587df3cd219a08d07db83e8e491"
+    }
+}

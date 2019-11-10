@@ -1,0 +1,23 @@
+<xf:macro name="post_list" arg-post="!" arg-thread="!">
+    <xf:if is="$xf.app.data('Truonglv\MostReactedPost:Post').getPosts() is not empty">
+        <xf:css src="most_reacted_post.less"/>
+        <div class="block MRP-postList">
+            <div class="block-container">
+                <h3 class="block-minorHeader">{{ phrase('most_reacted_x_posts_heading', {'total': $xf.options.tMostReactedPost_limit}) }}</h3>
+            </div>
+
+            <div class="block-outer block-outer--after">
+                <xf:foreach loop="$xf.app.data('Truonglv\MostReactedPost:Post').getPosts()" value="$postEntity">
+                    <xf:macro template="post_macros" name="post" arg-post="{$postEntity}" arg-thread="{$thread}"/>
+                </xf:foreach>
+            </div>
+        </div>
+    </xf:if>
+</xf:macro>
+
+<xf:macro name="post_meta" arg-post="!">
+    <ul class="listInline listInline--bullet u-muted MRP-postMeta" style="display: none">
+        <li><xf:username user="$post.User" defaultname="{$post.username}"/></li>
+        <li>{{ phrase('reaction_score:') }} {{ $post.reaction_score|number_short }}</li>
+    </ul>
+</xf:macro>

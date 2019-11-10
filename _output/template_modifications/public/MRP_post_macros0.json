@@ -1,0 +1,9 @@
+{
+    "template": "post_macros",
+    "description": "Render most reacted posts",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:ad position=\"post_below_container\" arg-post=\"{$post}\" />",
+    "replace": "$0\n<xf:if is=\"$post.isFirstPost()\">\n\t<xf:macro template=\"most_reacted_post_macros\"\n\t\t  name=\"post_list\" arg-post=\"{$post}\" arg-thread=\"{$thread}\"/>\n</xf:if>"
+}
