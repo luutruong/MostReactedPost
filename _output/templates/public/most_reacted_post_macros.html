@@ -19,5 +19,6 @@
     <ul class="listInline listInline--bullet u-muted MRP-postMeta" style="display: none">
         <li><xf:username user="$post.User" defaultname="{$post.username}"/></li>
         <li>{{ phrase('reaction_score:') }} {{ $post.reaction_score|number_short }}</li>
+        <li><a href="{{ link('posts', $post) }}">{{ phrase('most_reacted_view_post') }}</a></li>
     </ul>
 </xf:macro>
