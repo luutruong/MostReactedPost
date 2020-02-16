@@ -8,7 +8,10 @@
 
             <div class="block-outer block-outer--after">
                 <xf:foreach loop="$xf.app.data('Truonglv\MostReactedPost:Post').getPosts()" value="$postEntity">
-                    <xf:macro template="post_macros" name="post" arg-post="{$postEntity}" arg-thread="{$thread}"/>
+                    <xf:callback class="Truonglv\MostReactedPost\Callback" method="renderPostHtml">
+                        <xf:macro template="post_macros" name="post" arg-post="{$postEntity}" arg-thread="{$thread}"/>
+                    </xf:callback>
+
                 </xf:foreach>
             </div>
         </div>
